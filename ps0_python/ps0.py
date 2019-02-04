@@ -100,7 +100,9 @@ if __name__ == '__main__':
     print(noise.max())
     noisy_img = img.copy()
     noisy_img[:,:,1] = noisy_img[:,:,1] + noise
+    cv2.imwrite('output/ps0-5-a-1.png',noisy_img)
 
-    cv2.imshow('Noisy Image',noisy_img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    #b
+    noisy_blue_img = img.copy()
+    noisy_blue_img[:,:,0] = noisy_blue_img[:,:,0] + noise
+    cv2.imwrite('output/ps0-5-b-1.png',noisy_blue_img)
