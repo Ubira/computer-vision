@@ -97,6 +97,9 @@ if __name__ == '__main__':
     noise = np.random.normal(0,20,(shape[0],shape[1]))
     noise = noise.astype(int)
     noise = abs(noise)
+    # Other option (better)
+    # noise = np.zeros((shape[0],shape[1]), np.uint8)
+    # cv2.randn(noise, 0, 20)
     print(noise.max())
     noisy_img = img.copy()
     noisy_img[:,:,1] = noisy_img[:,:,1] + noise
